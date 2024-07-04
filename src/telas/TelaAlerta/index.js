@@ -1,10 +1,10 @@
 import React from 'react'
 import { StyleSheet, Text, View } from 'react-native';
 
-export default function TelaDois() {
+export default function TelaALerta() {
   return (
     <View style={styles.container}>
-      <Text>Tela Dois</Text>
+      <Text>Tela ALerta</Text>
     </View>
   );
 }

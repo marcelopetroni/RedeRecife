@@ -2,31 +2,39 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
-import TelaUm from './TelaUm';
-import TelaDois from './TelaDois';
-import TelaTres from './TelaTres';
+import TelaHome from './TelaHome';
+import TelaEducaHub from './TelaEducaHub';
+import TelaAjuda from './TelaAjuda';
+import TelaAlerta from './TelaAlerta';
 
 const Stack = createStackNavigator();
 
 function Rotas() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="TelaUm">
-        <Stack.Screen name="TelaUm" component={TelaUm} 
+      <Stack.Navigator initialRouteName="TelaHome">
+        <Stack.Screen name="TelaHome" component={TelaHome} 
           options={{
             title: '',
             headerTransparent: true,
             headerShown: false,
           }}
           />
-        <Stack.Screen name="TelaDois" component={TelaDois} 
+        <Stack.Screen name="TelaEducaHub" component={TelaEducaHub} 
           options={{
             title: '',
             headerTransparent: true,
             headerShown: false,
           }}
         />
-        <Stack.Screen name="TelaTres" component={TelaTres} 
+        <Stack.Screen name="TelaAjuda" component={TelaAjuda} 
+          options={{
+            title: '',
+            headerTransparent: true,
+            headerShown: false,
+          }}
+        />
+        <Stack.Screen name="TelaAlerta" component={TelaAlerta} 
           options={{
             title: '',
             headerTransparent: true,

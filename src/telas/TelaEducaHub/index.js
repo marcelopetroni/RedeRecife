@@ -1,10 +1,10 @@
 import React from 'react'
 import { StyleSheet, Text, View } from 'react-native';
 
-export default function TelaTres() {
+export default function TelaEducaHub() {
   return (
     <View style={styles.container}>
-      <Text>Tela Tres</Text>
+      <Text>Tela EducaHub</Text>
     </View>
   );
 }
