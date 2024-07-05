@@ -5,18 +5,36 @@
 Plataforma mobile que busca criar uma rede comunitária de resposta a desastres climáticos - Desafio 3 do Hacker Cidadão - 11.0
 
 ## Time 🏆
-- Breno Do Amaral - [Desenvolvedor/brenodoamaral1 ](https://www.linkedin.com/in/breno-amaral-4131891b9/)
-- Gabriella Graciano - [Designer](https://www.linkedin.com/in/gabygraciano/)
-- Gustavo Lima - [Desenvolvedor/GustavoHLMA](https://www.linkedin.com/in/gustavo-henrique-768048234/)
-- Leonardo Seabra - [Designer](https://www.linkedin.com/in/leo-seabra-086623275/)
-- Marcelo Nunes - [Desenvolvedor/marcelopetroni](https://www.linkedin.com/in/marcelo-nunes-a8b7a223a/)
+
+#### 👨‍💻 Desenvolvedores
+
+Breno do Amaral Falcão Souto<br/>
+📧 E-mail: brenodoamaral1@gmail.com<br/>
+🌐 GitHub: [github.com/brenodoamaral1](https://github.com/brenodoamaral1)
+
+Marcelo Nunes Ananias Petroni<br/>
+📧 E-mail: marceloapetroni@hotmail.com<br/>
+🌐 GitHub: [github.com/marcelopetroni](https://github.com/marcelopetroni)
+
+Gustavo Henrique Lima Mendes de Almeida<br/>
+📧 E-mail: gustavohlma8@gmail.com<br/>
+🌐 GitHub: [github.com/GustavoHLMA](https://github.com/GustavoHLMA)
+
+#### 🎨 UX/UI Designers
+
+Gabriella Graciano de Souza<br/>
+📧 E-mail: gabifc_graciano@hotmail.com<br/>
+🖋️ Behance: [behance.net/gabygraciano](https://github.com/gabygraciano)
+
+Leonardo José de Araújo Seabra<br/>
+📧 E-mail: leoseabrasz@gmail.com<br/>
+🖋️ Behance: [behance.net/leoseabra2](https://github.com/leoseabra2)
 
 ## Documentação 📄
 
 - [Figma](https://www.figma.com/design/zpJamDrK7lwvtRbsIG7NXr/Rede-Recife?node-id=11-14&t=PYIJgEym9iSxitc8-0)
-- [Fluxograma Gestor - Navegável] (https://www.figma.com/proto/zpJamDrK7lwvtRbsIG7NXr/Rede-Recife?node-id=124-3834&t=LzTuYpQ7ao2oTsCr-1)
+- [Fluxograma Gestor - Navegável](https://www.figma.com/proto/zpJamDrK7lwvtRbsIG7NXr/Rede-Recife?node-id=124-3834&t=LzTuYpQ7ao2oTsCr-1)
 
-  
 
 ## Tecnologias ⚙️
 
@@ -26,7 +44,7 @@ Plataforma mobile que busca criar uma rede comunitária de resposta a desastres 
 ## Instalação ⬇️
 
 ```bash
-- git clone https://github.com/marcelopetroni/RecorrenteDoBem.git
+- git clone https://github.com/marcelopetroni/RedeRecife.git
 - npm install
 ```
 
