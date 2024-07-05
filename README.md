@@ -24,11 +24,11 @@ Gustavo Henrique Lima Mendes de Almeida<br/>
 
 Gabriella Graciano de Souza<br/>
 📧 E-mail: gabifc_graciano@hotmail.com<br/>
-🖋️ Behance: [behance.net/gabygraciano](https://github.com/gabygraciano)
+🖋️ Behance: [behance.net/gabygraciano](behance.net/gabygraciano)
 
 Leonardo José de Araújo Seabra<br/>
 📧 E-mail: leoseabrasz@gmail.com<br/>
-🖋️ Behance: [behance.net/leoseabra2](https://github.com/leoseabra2)
+🖋️ Behance: [behance.net/leoseabra2](behance.net/gabygraciano)
 
 ## Documentação 📄
 
