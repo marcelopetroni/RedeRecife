@@ -66,7 +66,7 @@ const TelaAbrigo = ({ route }) => {
         <MaterialIcons name="person" size={24} color="gray" />
         <Text style={styles.contactName}>{abrigo.contactName}</Text>
         <TouchableOpacity onPress={() => handlePhonePress(abrigo.contactPhone)}>
-          <FontAwesome name="phone" size={24} color="green" style={styles.icon} />
+          <FontAwesome name="phone" size={24} color="#02385A" style={styles.icon} />
         </TouchableOpacity>
         <TouchableOpacity onPress={() => handleWhatsAppPress(abrigo.contactPhone)}>
           <FontAwesome name="whatsapp" size={24} color="green" style={styles.icon} />

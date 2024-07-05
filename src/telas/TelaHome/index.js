@@ -128,6 +128,10 @@ export default function TelaHome() {
     navigation.navigate('TelaAbrigo', { id });
   };
 
+  const handleMarkerSocialPress = (id) => {
+    navigation.navigate('TelaMovimento', { id });
+  };
+
   const [showAbrigados, setShowAbrigados] = useState(true);
   const [showMovimentos, setShowMovimentos] = useState(true);
   const [showFilters, setShowFilters] = useState(false);
@@ -356,6 +360,7 @@ export default function TelaHome() {
                 key={location.id}
                 coordinate={{ latitude: location.latitude, longitude: location.longitude }}
                 title={location.name}
+                onPress={() => handleMarkerSocialPress(location.id)}
               >
                 <Image source={Social}
                   style={{
