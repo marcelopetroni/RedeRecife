@@ -17,7 +17,6 @@ const AjudaRecife = ({navigation}) => {
   });
 
   const pickImage = async () => {
-    // No permissions request is necessary for launching the image library
     let result = await ImagePicker.launchImageLibraryAsync({
       mediaTypes: ImagePicker.MediaTypeOptions.All,
       allowsEditing: true,
@@ -176,11 +175,14 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
   },
+  backIcon: {
+    marginLeft: 10
+  },
   title: {
     fontSize: 24,
     fontWeight: 'bold',
     textAlign: 'center',
-    marginVertical: 40,
+    marginVertical: 33,
     marginLeft: 80,
     color: '#02385A',
   },
