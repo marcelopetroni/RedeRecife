@@ -95,7 +95,7 @@ const TabNavigator = () => {
 function Rotas() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Main">
+      <Stack.Navigator initialRouteName="TelaHome">
       <Stack.Screen
           name="Main"
           component={TabNavigator}
