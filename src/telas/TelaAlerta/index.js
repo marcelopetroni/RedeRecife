@@ -5,7 +5,7 @@ import * as ImagePicker from 'expo-image-picker';
 import Icon from 'react-native-vector-icons/Ionicons';
 import { Iconify } from 'react-native-iconify';
 
-const AdicionarAlerta = () => {
+const AdicionarAlerta = ({navigation}) => {
   const [category, setCategory] = useState('');
   const [image, setImage] = useState(null);
   const [inputs, setInputs] = useState({

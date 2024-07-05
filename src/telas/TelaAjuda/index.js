@@ -4,9 +4,7 @@ import * as ImagePicker from 'expo-image-picker';
 import { Iconify } from 'react-native-iconify';
 import Icon from 'react-native-vector-icons/Ionicons';
 
-
-
-const AjudaRecife = () => {
+const AjudaRecife = ({navigation}) => {
   const [category, setCategory] = useState('');
   const [image, setImage] = useState(null);
   const [inputs, setInputs] = useState({
