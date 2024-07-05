@@ -66,9 +66,7 @@ git clone https://github.com/marcelopetroni/RedeRecife.git
 
 Navegue até a pasta do projeto clonado e execute os seguintes comandos para instalar as dependências necessárias:
 ```bash
-cd mobile
 npm install
-npm install -g expo-cli
 ```
 
 ## Rodando o Projeto 🏃
