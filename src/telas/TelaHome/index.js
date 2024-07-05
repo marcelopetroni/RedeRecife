@@ -9,7 +9,6 @@
   import Lupa from '../../imagens/lupa.svg';
   import MapView, { Marker, Polygon, Circle } from 'react-native-maps';
   import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplete';
-  import { API_KEY } from '@env';
 
   const pic = Profile;
   const abrigos = [
@@ -286,7 +285,7 @@
               placeholder='Buscar endereço'
               onPress={handleLocationSelected}
               query={{
-                key: API_KEY,
+                key: 'API_KEY',
                 language: 'en',
               }}
               fetchDetails={true}
