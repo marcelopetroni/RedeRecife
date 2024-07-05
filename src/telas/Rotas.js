@@ -12,6 +12,8 @@ import TelaEducaHub from './TelaEducaHub';
 import TelaAjuda from './TelaAjuda';
 import TelaAlerta from './TelaAlerta';
 import TelaAbrigo from './TelaAbrigo';
+import TelaMovimento from './TelaSocial';
+
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
 
@@ -100,6 +102,17 @@ const TabNavigator = () => {
       <Tab.Screen
         name="TelaAbrigo"
         component={TelaAbrigo}
+        options={{
+          tabBarIcon: () => (null),
+          title: '',
+          headerTransparent: true,
+          headerShown: false,
+          tabBarButton: () => null,
+        }}
+      />
+      <Tab.Screen
+        name="TelaMovimento"
+        component={TelaMovimento}
         options={{
           tabBarIcon: () => (null),
           title: '',

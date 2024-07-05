@@ -5,7 +5,7 @@ import Profile from '../../imagens/profile.png';
 import Rec from '../../imagens/Logo.png';
 import Social from '../../imagens/social.png';
 import Abrigo from '../../imagens/abrigo.png';
-import Lupa from '../../imagens/lupa.svg';
+import Lupa from '../../imagens/lupa.png';
 import MapView, { Marker, Polygon, Circle } from 'react-native-maps';
 import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplete';
 import { API_KEY } from '@env';
@@ -36,19 +36,19 @@ const abrigos = [
 const movimentos = [
   {
     id: 4,
-    name: "Location 4",
+    name: "Arrecadação de Alimentos",
     latitude: -8.050562,
     longitude: -34.874964,
   },
   {
     id: 5,
-    name: "Location 5",
+    name: "Doação de Roupas",
     latitude: -8.055462,
     longitude: -34.878864,
   },
   {
     id: 6,
-    name: "Location 6",
+    name: "Doação de Objetos",
     latitude: -8.052362,
     longitude: -34.868764,
   },
@@ -125,6 +125,10 @@ export default function TelaHome() {
 
   const handleMarkerPress = (id) => {
     navigation.navigate('TelaAbrigo', { id });
+  };
+
+  const handleMarkerPressMovimento = (id) => {
+    navigation.navigate('TelaMovimento', { id });
   };
 
   const [showAbrigados, setShowAbrigados] = useState(true);
@@ -355,6 +359,7 @@ export default function TelaHome() {
                 key={location.id}
                 coordinate={{ latitude: location.latitude, longitude: location.longitude }}
                 title={location.name}
+                onPress={() => handleMarkerPressMovimento(location.id)}
               >
                 <Image source={Social}
                   style={{
