@@ -2,7 +2,7 @@ import React, { useState, useRef } from 'react';
 import { StyleSheet, View, Text, Dimensions, TouchableOpacity, KeyboardAvoidingView, Platform, TouchableWithoutFeedback, Keyboard, Image } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import Profile from '../../imagens/profile.png';
-import Rec from '../../imagens/Logo.png';
+import Rec from '../../imagens/logo.png';
 import Social from '../../imagens/social.png';
 import Abrigo from '../../imagens/abrigo.png';
 import Lupa from '../../imagens/lupa.png';
