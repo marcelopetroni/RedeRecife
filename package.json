@@ -20,7 +20,8 @@
     "react-native-maps": "^1.15.6",
     "react-native-svg": "15.2.0",
     "react-native-vector-icons": "^10.1.0",
-    "react-native-webview": "^13.10.4"
+    "react-native-webview": "^13.10.4",
+    "expo-checkbox": "~3.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",

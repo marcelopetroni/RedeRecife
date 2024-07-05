@@ -6,13 +6,21 @@ import TelaHome from './TelaHome';
 import TelaEducaHub from './TelaEducaHub';
 import TelaAjuda from './TelaAjuda';
 import TelaAlerta from './TelaAlerta';
+import TelaLogin from './TelaLogin';
 
 const Stack = createStackNavigator();
 
 function Rotas() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="TelaEducaHub">
+      <Stack.Navigator initialRouteName="TelaLogin">
+      <Stack.Screen name="TelaLogin" component={TelaLogin} 
+            options={{
+              title: '',
+              headerTransparent: true,
+              headerShown: false,
+            }}
+          />
         <Stack.Screen name="TelaEducaHub" component={TelaEducaHub} 
             options={{
               title: '',
