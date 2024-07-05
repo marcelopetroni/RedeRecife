@@ -12,7 +12,14 @@ const Stack = createStackNavigator();
 function Rotas() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="TelaHome">
+      <Stack.Navigator initialRouteName="TelaEducaHub">
+        <Stack.Screen name="TelaEducaHub" component={TelaEducaHub} 
+            options={{
+              title: '',
+              headerTransparent: true,
+              headerShown: false,
+            }}
+          />
         <Stack.Screen name="TelaHome" component={TelaHome} 
           options={{
             title: '',
@@ -20,13 +27,6 @@ function Rotas() {
             headerShown: false,
           }}
           />
-        <Stack.Screen name="TelaEducaHub" component={TelaEducaHub} 
-          options={{
-            title: '',
-            headerTransparent: true,
-            headerShown: false,
-          }}
-        />
         <Stack.Screen name="TelaAjuda" component={TelaAjuda} 
           options={{
             title: '',
