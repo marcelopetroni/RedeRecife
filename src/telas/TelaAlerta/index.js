@@ -5,7 +5,7 @@ import * as ImagePicker from 'expo-image-picker';
 import Icon from 'react-native-vector-icons/Ionicons';
 import { Iconify } from 'react-native-iconify';
 
-const AdicionarAlerta = ({navigation}) => {
+const AdicionarAlerta = ({ navigation }) => {
   const [category, setCategory] = useState('');
   const [image, setImage] = useState(null);
   const [inputs, setInputs] = useState({
@@ -16,11 +16,6 @@ const AdicionarAlerta = ({navigation}) => {
 
   const handleCategoryChange = (newCategory) => {
     setCategory(newCategory);
-    setInputs({
-      titulo: '',
-      outraCategoria: '',
-      localizacao: '',
-    });
   };
 
   const handleInputChange = (name, value) => {
@@ -28,7 +23,6 @@ const AdicionarAlerta = ({navigation}) => {
   };
 
   const pickImage = async () => {
-    // No permissions request is necessary for launching the image library
     let result = await ImagePicker.launchImageLibraryAsync({
       mediaTypes: ImagePicker.MediaTypeOptions.All,
       allowsEditing: true,
@@ -36,17 +30,24 @@ const AdicionarAlerta = ({navigation}) => {
       quality: 1,
     });
 
-    console.log(result);
-
-    if (!result.canceled) {
+    if (!result.cancelled) {
       setImage(result.assets[0].uri);
     }
   };
 
+  const handleSubmit = () => {
+    setCategory('');
+    setImage(null);
+    setInputs({
+      titulo: '',
+      outraCategoria: '',
+      localizacao: '',
+    });
+  };
 
   return (
     <ScrollView style={styles.container}>
-       <View style={styles.header}>
+      <View style={styles.header}>
         <TouchableOpacity onPress={() => navigation.navigate('TelaHome')}>
           <Icon name="arrow-back" size={25} color="#B02304" style={styles.backIcon} />
         </TouchableOpacity>
@@ -54,7 +55,9 @@ const AdicionarAlerta = ({navigation}) => {
       </View>
       <View style={styles.uploadContainer}>
         {image && <Image source={{ uri: image }} style={styles.image} />}
-        <TouchableOpacity onPress={pickImage} ><Iconify icon="mdi:fluent:camera-add-20-regular" size={42} color="#02385A" /></TouchableOpacity>
+        <TouchableOpacity onPress={pickImage}>
+          <Iconify icon="mdi:fluent:camera-add-20-regular" size={42} color="#02385A" />
+        </TouchableOpacity>
       </View>
       <Text style={styles.subTitle}>Título</Text>
       <TextInput
@@ -124,7 +127,7 @@ const AdicionarAlerta = ({navigation}) => {
           </View>
         </Marker>
       </MapView>
-      <TouchableOpacity style={styles.submitButton}>
+      <TouchableOpacity style={styles.submitButton} onPress={handleSubmit}>
         <Text style={styles.submitText}>Enviar</Text>
       </TouchableOpacity>
     </ScrollView>
@@ -142,7 +145,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   backIcon: {
-    marginLeft: 10
+    marginLeft: 10,
   },
   title: {
     fontSize: 24,
@@ -152,7 +155,6 @@ const styles = StyleSheet.create({
     marginLeft: 70,
     color: '#B02304',
   },
- 
   subTitle: {
     fontSize: 16,
     color: '#B02304',

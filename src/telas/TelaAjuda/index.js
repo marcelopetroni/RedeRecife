@@ -4,7 +4,7 @@ import * as ImagePicker from 'expo-image-picker';
 import { Iconify } from 'react-native-iconify';
 import Icon from 'react-native-vector-icons/Ionicons';
 
-const AjudaRecife = ({navigation}) => {
+const AjudaRecife = ({ navigation }) => {
   const [category, setCategory] = useState('');
   const [image, setImage] = useState(null);
   const [inputs, setInputs] = useState({
@@ -24,15 +24,31 @@ const AjudaRecife = ({navigation}) => {
       quality: 1,
     });
 
-    console.log(result);
-
-    if (!result.canceled) {
+    if (!result.cancelled) {
       setImage(result.assets[0].uri);
     }
   };
 
   const handleCategoryChange = (newCategory) => {
     setCategory(newCategory);
+    setInputs((prevInputs) => ({
+      ...prevInputs,
+      ...(prevInputs.titulo ? {} : { titulo: '' }), 
+      objetivo: '',
+      localizacao: '',
+      capacidade: '',
+      responsavel: '',
+      contato: ''
+    }));
+  };
+
+  const handleInputChange = (name, value) => {
+    setInputs({ ...inputs, [name]: value });
+  };
+
+  const handleSubmit = () => {
+    setCategory('');
+    setImage(null);
     setInputs({
       titulo: '',
       objetivo: '',
@@ -41,10 +57,6 @@ const AjudaRecife = ({navigation}) => {
       responsavel: '',
       contato: ''
     });
-  };
-
-  const handleInputChange = (name, value) => {
-    setInputs({ ...inputs, [name]: value });
   };
 
   const renderForm = () => {
@@ -131,34 +143,42 @@ const AjudaRecife = ({navigation}) => {
   return (
     <ScrollView style={styles.container}>
       <View style={styles.header}>
-      <TouchableOpacity onPress={() => navigation.navigate('TelaHome')}>
-        <Icon name="arrow-back" size={25} color="#02385A" style={styles.backIcon} />
-      </TouchableOpacity>
-      <Text style={styles.title}>AjudaRecife</Text>
+        <TouchableOpacity onPress={() => navigation.navigate('TelaHome')}>
+          <Icon name="arrow-back" size={25} color="#02385A" style={styles.backIcon} />
+        </TouchableOpacity>
+        <Text style={styles.title}>AjudaRecife</Text>
       </View>
       <View style={styles.uploadContainer}>
-      {image && <Image source={{ uri: image }} style={styles.image} />}
-      <TouchableOpacity onPress={pickImage} ><Iconify icon="mdi:fluent:camera-add-20-regular" size={42} color="#02385A" /></TouchableOpacity>
+        {image && <Image source={{ uri: image }} style={styles.image} />}
+        <TouchableOpacity onPress={pickImage}>
+          <Iconify icon="mdi:fluent:camera-add-20-regular" size={42} color="#02385A" />
+        </TouchableOpacity>
       </View>
-      <Text style={styles.subTitle} >Título</Text>
-      <TextInput style={styles.input} placeholder="Escreva aqui o título da sua solicitação" placeholderTextColor="#808080" />
-      <Text style={styles.subTitle} >Categoria</Text>
+      <Text style={styles.subTitle}>Título</Text>
+      <TextInput
+        style={styles.input}
+        placeholder="Escreva aqui o título da sua solicitação"
+        placeholderTextColor="#808080"
+        value={inputs.titulo}
+        onChangeText={(text) => handleInputChange('titulo', text)}
+      />
+      <Text style={styles.subTitle}>Categoria</Text>
       <View style={styles.categoryContainer}>
         <TouchableOpacity
           style={[styles.categoryButton, category === 'Ação Social' && styles.selectedCategory]}
-          onPress={() => setCategory('Ação Social')}
+          onPress={() => handleCategoryChange('Ação Social')}
         >
           <Text style={[styles.categoryText, category === 'Ação Social' && styles.selectedCategoryText]}>Ação Social</Text>
         </TouchableOpacity>
         <TouchableOpacity
           style={[styles.categoryButton, category === 'Abrigo' && styles.selectedCategory]}
-          onPress={() => setCategory('Abrigo')}
+          onPress={() => handleCategoryChange('Abrigo')}
         >
           <Text style={[styles.categoryText, category === 'Abrigo' && styles.selectedCategoryText]}>Abrigo</Text>
         </TouchableOpacity>
       </View>
       {renderForm()}
-      <TouchableOpacity style={styles.submitButton}>
+      <TouchableOpacity style={styles.submitButton} onPress={handleSubmit}>
         <Text style={styles.submitText}>Enviar</Text>
       </TouchableOpacity>
     </ScrollView>
