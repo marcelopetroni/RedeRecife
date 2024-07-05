@@ -1,6 +1,7 @@
 import React, { useState, useRef } from 'react';
 import { TouchableOpacity, ScrollView, Linking, Image, View, Text, TextInput, StyleSheet, Dimensions, Animated } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
+import { Iconify } from 'react-native-iconify';
 import WebView from 'react-native-webview';
 
 const { width } = Dimensions.get('window');
@@ -39,7 +40,12 @@ export default function TelaEducaHub({ navigation }) {
 
   return (
     <ScrollView style={styles.container}>
+      <View style={styles.contentContainer}>
+      <TouchableOpacity onPress={() => navigation.navigate('TelaHome')}>
+          <Icon name="arrow-back" size={25} color="#02385A" style={styles.backIcon} />
+        </TouchableOpacity>
       <View style={styles.textoContainer}>
+      </View>
         <Text style={styles.texto1}>EducaHub</Text>
       </View>
       <View style={styles.inputWrapper}>
@@ -138,14 +144,25 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
   },
+  contentContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
   textoContainer: {
+    flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
     paddingVertical: 20,
   },
+  backIcon: {
+    marginTop: 55,
+    marginLeft: 30,
+    alignItems: 'flex-start'
+  },
   texto1: {
     marginTop: 55,
-    fontSize: 20,
+    marginLeft: 100,
+    fontSize: 22,
     fontWeight: '700',
     color: '#02385A',
   },

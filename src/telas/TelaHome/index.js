@@ -1,7 +1,6 @@
 import React, { useState, useRef } from 'react';
-import { StyleSheet, View, Text, TouchableOpacity, KeyboardAvoidingView, Platform, TouchableWithoutFeedback, Keyboard } from 'react-native';
+import { StyleSheet, View, Text, Dimensions, TouchableOpacity, KeyboardAvoidingView, Platform, TouchableWithoutFeedback, Keyboard, Image } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
-import { Image } from 'expo-image';
 import Profile from '../../imagens/profile.png';
 import Rec from '../../imagens/icon.svg';
 import Social from '../../imagens/social.svg';
@@ -11,8 +10,8 @@ import MapView, { Marker, Polygon, Circle } from 'react-native-maps';
 import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplete';
 import { API_KEY } from '@env';
 import { useNavigation } from '@react-navigation/native';
-
 const pic = Profile;
+
 const abrigos = [
   {
     id: 1,
@@ -317,7 +316,7 @@ export default function TelaHome() {
                 paddingLeft: 40, // Ajusta o espaço para a esquerda do texto
                 borderRadius: 10,
               },
-              listView: { backgroundColor: 'red' }
+              listView: { backgroundColor: '#fff' }
             }}
           >
             <Image source={Lupa} contentFit="contain"
