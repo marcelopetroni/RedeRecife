@@ -2,7 +2,7 @@ import React, { useState, useRef } from 'react';
 import { StyleSheet, View, Text, Dimensions, TouchableOpacity, KeyboardAvoidingView, Platform, TouchableWithoutFeedback, Keyboard, Image } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import Profile from '../../imagens/profile.png';
-import Rec from '../../imagens/logo.png';
+import Rec from '../../imagens/Logo.png';
 import Social from '../../imagens/social.png';
 import Abrigo from '../../imagens/abrigo.png';
 import Lupa from '../../imagens/lupa.png';
@@ -36,19 +36,19 @@ const abrigos = [
 const movimentos = [
   {
     id: 4,
-    name: "Location 4",
+    name: "Arrecadação de Alimentos",
     latitude: -8.050562,
     longitude: -34.874964,
   },
   {
     id: 5,
-    name: "Location 5",
+    name: "Doação de Roupas",
     latitude: -8.055462,
     longitude: -34.878864,
   },
   {
     id: 6,
-    name: "Location 6",
+    name: "Doação de Objetos",
     latitude: -8.052362,
     longitude: -34.868764,
   },

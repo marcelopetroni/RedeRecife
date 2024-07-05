@@ -28,8 +28,8 @@ const movimentos = [
   },
   {
     id: 6,
-    name: "Campanha de Vacinação",
-    description: "Vacinação gratuita contra a gripe para moradores do bairro.",
+    name: "Doação de Objetos",
+    description: "Coleta de objetos para distribuir a famílias carentes da região.",
     address: "Av. Conde da Boa Vista, 890, Recife - PE",
     image: require('../../imagens/fotoSocial.png'),
     contactName: "Carlos Silva",
