@@ -12,7 +12,6 @@ import TelaEducaHub from './TelaEducaHub';
 import TelaAjuda from './TelaAjuda';
 import TelaAlerta from './TelaAlerta';
 import TelaAbrigo from './TelaAbrigo';
-
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
 
@@ -98,6 +97,18 @@ const TabNavigator = () => {
           headerShown: false,
         }}
       />
+      <Tab.Screen
+        name="TelaAbrigo"
+        component={TelaAbrigo}
+        options={{
+          tabBarIcon: () => (null),
+          title: '',
+          headerTransparent: true,
+          headerShown: false,
+          tabBarButton: () => null,
+        }}
+      />
+
     </Tab.Navigator>
   );
 };
@@ -105,43 +116,6 @@ const TabNavigator = () => {
 function Rotas() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="TelaHome">
-        <Stack.Screen name="TelaEducaHub" component={TelaEducaHub} 
-            options={{
-              title: '',
-              headerTransparent: true,
-              headerShown: false,
-            }}
-          />
-        <Stack.Screen name="TelaHome" component={TelaHome} 
-          options={{
-            title: '',
-            headerTransparent: true,
-            headerShown: false,
-          }}
-          />
-        <Stack.Screen name="TelaAjuda" component={TelaAjuda} 
-          options={{
-            title: '',
-            headerTransparent: true,
-            headerShown: false,
-          }}
-        />
-        <Stack.Screen name="TelaAlerta" component={TelaAlerta} 
-          options={{
-            title: '',
-            headerTransparent: true,
-            headerShown: false,
-          }}
-        />
-        <Stack.Screen name="TelaAbrigo" component={TelaAbrigo} 
-          options={{
-            title: '',
-            headerTransparent: true,
-            headerShown: false,
-          }}
-        />
-      </Stack.Navigator>
       <TabNavigator />
     </NavigationContainer>
   );

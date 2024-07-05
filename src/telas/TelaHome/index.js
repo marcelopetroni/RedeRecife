@@ -2,9 +2,9 @@ import React, { useState, useRef } from 'react';
 import { StyleSheet, View, Text, Dimensions, TouchableOpacity, KeyboardAvoidingView, Platform, TouchableWithoutFeedback, Keyboard, Image } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import Profile from '../../imagens/profile.png';
-import Rec from '../../imagens/icon.svg';
-import Social from '../../imagens/social.svg';
-import Abrigo from '../../imagens/abrigo.svg';
+import Rec from '../../imagens/Logo.png';
+import Social from '../../imagens/social.png';
+import Abrigo from '../../imagens/abrigo.png';
 import Lupa from '../../imagens/lupa.svg';
 import MapView, { Marker, Polygon, Circle } from 'react-native-maps';
 import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplete';
@@ -257,7 +257,7 @@ export default function TelaHome() {
           <View style={styles.header}>
             <Image source={Rec} contentFit="contain"
               style={{
-                height: 50,
+                alignSelf: 'center',
                 marginTop: 10,
               }}
             />
