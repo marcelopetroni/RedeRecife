@@ -7,6 +7,7 @@ import TelaEducaHub from './TelaEducaHub';
 import TelaAjuda from './TelaAjuda';
 import TelaAlerta from './TelaAlerta';
 import TelaAbrigo from './TelaAbrigo';
+import TelaMovimento from './TelaSocial';
 
 const Stack = createStackNavigator();
 
@@ -49,6 +50,14 @@ function Rotas() {
             headerShown: false,
           }}
         />
+        <Stack.Screen name="TelaMovimento" component={TelaMovimento}
+          options={{
+            title: '',
+            headerTransparent: true,
+            headerShown: false,
+          }}
+        />
+
       </Stack.Navigator>
     </NavigationContainer>
   );
