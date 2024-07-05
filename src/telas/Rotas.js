@@ -14,7 +14,7 @@ const Stack = createStackNavigator();
 function Rotas() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="TelaCadastro">
+      <Stack.Navigator initialRouteName="TelaHome">
       <Stack.Screen name="TelaLogin" component={TelaLogin} 
             options={{
               title: '',
