@@ -14,6 +14,7 @@ Plataforma mobile que busca criar uma rede comunitária de resposta a desastres 
 ## Documentação 📄
 
 - [Figma](https://www.figma.com/design/zpJamDrK7lwvtRbsIG7NXr/Rede-Recife?node-id=11-14&t=PYIJgEym9iSxitc8-0)
+- [Fluxograma Gestor - Navegável] (https://www.figma.com/proto/zpJamDrK7lwvtRbsIG7NXr/Rede-Recife?node-id=124-3834&t=LzTuYpQ7ao2oTsCr-1)
 
   
 
@@ -33,7 +34,7 @@ Plataforma mobile que busca criar uma rede comunitária de resposta a desastres 
 
 ## Rodando o projeto - Client 🏃
 
-Na pasta `RecorrenteDoBem`
+Na pasta `RedeRecife`
 
   
 
