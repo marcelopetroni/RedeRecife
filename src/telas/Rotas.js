@@ -13,6 +13,7 @@ import TelaAjuda from './TelaAjuda';
 import TelaAlerta from './TelaAlerta';
 import TelaAbrigo from './TelaAbrigo';
 import TelaMovimento from './TelaSocial';
+
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
 

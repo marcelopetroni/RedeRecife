@@ -5,7 +5,7 @@ import * as ImagePicker from 'expo-image-picker';
 import Icon from 'react-native-vector-icons/Ionicons';
 import { Iconify } from 'react-native-iconify';
 
-const AdicionarAlerta = () => {
+const AdicionarAlerta = ({navigation}) => {
   const [category, setCategory] = useState('');
   const [image, setImage] = useState(null);
   const [inputs, setInputs] = useState({
@@ -135,21 +135,24 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 20,
-    marginTop: 20,
     backgroundColor: '#fff',
   },
   header: {
     flexDirection: 'row',
     alignItems: 'center',
   },
+  backIcon: {
+    marginLeft: 10
+  },
   title: {
     fontSize: 24,
     fontWeight: 'bold',
     textAlign: 'center',
-    marginVertical: 30,
-    marginLeft: 60,
+    marginVertical: 33,
+    marginLeft: 70,
     color: '#B02304',
   },
+ 
   subTitle: {
     fontSize: 16,
     color: '#B02304',
