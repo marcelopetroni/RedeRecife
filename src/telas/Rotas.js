@@ -11,6 +11,7 @@ import TelaHome from './TelaHome';
 import TelaEducaHub from './TelaEducaHub';
 import TelaAjuda from './TelaAjuda';
 import TelaAlerta from './TelaAlerta';
+import TelaAbrigo from './TelaAbrigo';
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
 
@@ -96,6 +97,18 @@ const TabNavigator = () => {
           headerShown: false,
         }}
       />
+      <Tab.Screen
+        name="TelaAbrigo"
+        component={TelaAbrigo}
+        options={{
+          tabBarIcon: () => (null),
+          title: '',
+          headerTransparent: true,
+          headerShown: false,
+          tabBarButton: () => null,
+        }}
+      />
+
     </Tab.Navigator>
   );
 };
