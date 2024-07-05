@@ -1,7 +1,6 @@
   import React, { useState, useRef } from 'react';
-  import { StyleSheet, View, Text, Dimensions, TouchableOpacity, KeyboardAvoidingView, Platform, TouchableWithoutFeedback, Keyboard } from 'react-native';
+  import { StyleSheet, View, Text, Dimensions, TouchableOpacity, KeyboardAvoidingView, Platform, TouchableWithoutFeedback, Keyboard, Image } from 'react-native';
   import { LinearGradient } from 'expo-linear-gradient';
-  import { Image } from 'expo-image';
   import Profile from '../../imagens/profile.png';
   import Rec from '../../imagens/icon.svg';
   import Social from '../../imagens/social.svg';
@@ -9,7 +8,7 @@
   import Lupa from '../../imagens/lupa.svg';
   import MapView, { Marker, Polygon, Circle } from 'react-native-maps';
   import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplete';
-  import { API_KEY } from '@env';
+
 
   const pic = Profile;
   const abrigos = [
@@ -286,7 +285,7 @@
               placeholder='Buscar endereço'
               onPress={handleLocationSelected}
               query={{
-                key: API_KEY,
+                key: 'API_KEY',
                 language: 'en',
               }}
               fetchDetails={true}
