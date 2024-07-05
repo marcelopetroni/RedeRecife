@@ -34,32 +34,55 @@ Leonardo José de Araújo Seabra<br/>
 
 - [Figma](https://www.figma.com/design/zpJamDrK7lwvtRbsIG7NXr/Rede-Recife?node-id=11-14&t=PYIJgEym9iSxitc8-0)
 - [Fluxograma Gestor - Navegável](https://www.figma.com/proto/zpJamDrK7lwvtRbsIG7NXr/Rede-Recife?node-id=124-3834&t=LzTuYpQ7ao2oTsCr-1)
+- [Fluxograma Comunidade - Navegável](https://www.figma.com/proto/zpJamDrK7lwvtRbsIG7NXr/Rede-Recife?node-id=101-1228&t=LzTuYpQ7ao2oTsCr-1)
 
 
 ## Tecnologias ⚙️
 
 - Javascript
 - React Native
-  
+
 ## Instalação ⬇️
 
+### Passo 1: Configurar o Ambiente
+
+#### Opção 1: Usar um Emulador Android
+
+1. Baixe e instale o [Android Studio](https://developer.android.com/studio).
+2. No Android Studio, configure um emulador Android seguindo [estas instruções](https://developer.android.com/studio/run/emulator).
+
+#### Opção 2: Usar um Dispositivo Mobile
+
+1. Baixe o aplicativo [Expo Go](https://expo.dev/client) no seu dispositivo móvel (disponível na App Store e Google Play).
+
+### Passo 2: Clonar o Repositório
+
+Abra o terminal e execute o seguinte comando para clonar o repositório do projeto:
 ```bash
-- git clone https://github.com/marcelopetroni/RedeRecife.git
-- npm install
+git clone https://github.com/marcelopetroni/RedeRecife.git
 ```
 
-  
+### Passo 3: Instalar Dependências
 
-## Rodando o projeto - Client 🏃
-
-Na pasta `RedeRecife`
-
-  
-
+Navegue até a pasta do projeto clonado e execute os seguintes comandos para instalar as dependências necessárias:
 ```bash
-- npx expo start
-```  
-  
+cd mobile
+npm install
+npm install -g expo-cli
+```
+
+## Rodando o Projeto 🏃
+
+### Passo 1: Iniciar o Servidor Expo
+No terminal, dentro da pasta do projeto, execute:
+```bash
+npx expo start
+```
+
+### Passo 2: Abrir o Projeto
+1. Se estiver usando um emulador Android, pressione a no terminal.
+2. Se estiver usando o Expo Go no seu dispositivo móvel, escaneie o QR code exibido no terminal ou no navegador com o aplicativo Expo Go.
+
 
 ## Como contribuir 🤝
 ### Branches
