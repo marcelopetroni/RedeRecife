@@ -39,8 +39,9 @@ Leonardo José de Araújo Seabra<br/>
 
 ## Tecnologias ⚙️
 
-- Javascript
+- JavaScript
 - React Native
+- Expo Go
 
 ## Instalação ⬇️
 
