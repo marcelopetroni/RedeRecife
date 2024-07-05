@@ -1,18 +1,17 @@
 import React, { useState, useRef } from 'react';
-import { StyleSheet, View, Text, TouchableOpacity, KeyboardAvoidingView, Platform, TouchableWithoutFeedback, Keyboard } from 'react-native';
+import { StyleSheet, View, Text, Dimensions, TouchableOpacity, KeyboardAvoidingView, Platform, TouchableWithoutFeedback, Keyboard, Image } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
-import { Image } from 'expo-image';
 import Profile from '../../imagens/profile.png';
-import Rec from '../../imagens/icon.svg';
-import Social from '../../imagens/social.svg';
-import Abrigo from '../../imagens/abrigo.svg';
-import Lupa from '../../imagens/lupa.svg';
+import Rec from '../../imagens/logo.png';
+import Social from '../../imagens/social.png';
+import Abrigo from '../../imagens/abrigo.png';
+import Lupa from '../../imagens/lupa.png';
 import MapView, { Marker, Polygon, Circle } from 'react-native-maps';
 import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplete';
 import { API_KEY } from '@env';
 import { useNavigation } from '@react-navigation/native';
-
 const pic = Profile;
+
 const abrigos = [
   {
     id: 1,
@@ -128,7 +127,7 @@ export default function TelaHome() {
     navigation.navigate('TelaAbrigo', { id });
   };
 
-  const handleMarkerSocialPress = (id) => {
+  const handleMarkerPressMovimento = (id) => {
     navigation.navigate('TelaMovimento', { id });
   };
 
@@ -262,7 +261,7 @@ export default function TelaHome() {
           <View style={styles.header}>
             <Image source={Rec} contentFit="contain"
               style={{
-                height: 50,
+                alignSelf: 'center',
                 marginTop: 10,
               }}
             />
@@ -321,7 +320,7 @@ export default function TelaHome() {
                 paddingLeft: 40, // Ajusta o espaço para a esquerda do texto
                 borderRadius: 10,
               },
-              listView: { backgroundColor: 'red' }
+              listView: { backgroundColor: '#fff' }
             }}
           >
             <Image source={Lupa} contentFit="contain"
@@ -360,7 +359,7 @@ export default function TelaHome() {
                 key={location.id}
                 coordinate={{ latitude: location.latitude, longitude: location.longitude }}
                 title={location.name}
-                onPress={() => handleMarkerSocialPress(location.id)}
+                onPress={() => handleMarkerPressMovimento(location.id)}
               >
                 <Image source={Social}
                   style={{
